@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import db from '../db.json'
+import Head from 'next/head'
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
@@ -26,6 +27,12 @@ const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Alura Quiz</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        {/* colocar favicon depois */}
+        {/* https://metatags.io/ */}
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
